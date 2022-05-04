@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomForStudents">
         <activity
-            android:name=".api.SplashScreen"
+            android:name=".SplashScreen"
             android:exported="false" />
         <activity
             android:name=".ListaAnuncios"

@@ -1,4 +1,4 @@
-package ecgm.com.roomforstudents.api
+package ecgm.com.roomforstudents
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
