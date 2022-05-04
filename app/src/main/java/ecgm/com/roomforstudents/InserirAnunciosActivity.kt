@@ -84,3 +84,133 @@ override fun onCreate(savedInstanceState: Bundle?) {
         true
     }
 }
+
+override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+    if(toggle.onOptionsItemSelected(item)){
+        return true
+    }
+    return super.onOptionsItemSelected(item)
+}
+
+// Método para fazer logout
+// Apaga os dados gravados no shared preferences
+fun logout(){
+    val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
+    shared_preferences_edit.clear()
+    shared_preferences_edit.apply()
+
+    val intent = Intent(this@InserirAnunciosActivity, LoginActivity::class.java)
+    startActivity(intent)
+    finish()
+
+}
+
+// Passa o Uri da imagem para bitmap e posteriomente para base64
+// guarda a imagem em formato base64 (numa string) de modo a ser inserido na BD
+override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    super.onActivityResult(requestCode, resultCode, data)
+    if (resultCode == RESULT_OK && requestCode == pickImage) {
+        imageUri = data?.data
+        // imageView.setImageURI(imageUri)
+        val bitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, imageUri)
+
+        val bitmapReSize = resizeBitmap(bitmap,1100)
+
+        // If bitmap is not null
+        bitmap?.let {
+            imageView.setImageBitmap(bitmapReSize)
+
+        }
+
+        val base= bitmapReSize?.let { it1 -> getBase64String(it1) }
+
+        base64 = base.toString()
+
+
+    }
+}
+
+// Reduz o tamanho do tamanho do bitmap
+fun resizeBitmap(source: Bitmap, maxLength: Int): Bitmap? {
+    return try {
+        if (source.height >= source.width) {
+            if (source.height <= maxLength) { // if image already smaller than the required height
+                return source
+            }
+            val aspectRatio = source.width.toDouble() / source.height.toDouble()
+            val targetWidth = (maxLength * aspectRatio).toInt()
+            val result = Bitmap.createScaledBitmap(source, targetWidth, maxLength, false)
+            if (result != source) {
+            }
+            result
+        } else {
+            if (source.width <= maxLength) { // if image already smaller than the required height
+                return source
+            }
+            val aspectRatio = source.height.toDouble() / source.width.toDouble()
+            val targetHeight = (maxLength * aspectRatio).toInt()
+            val result = Bitmap.createScaledBitmap(source, maxLength, targetHeight, false)
+            if (result != source) {
+            }
+            result
+        }
+    } catch (e: Exception) {
+        source
+    }
+}
+
+// faz a conversão da imagem de bitmap para base64
+private fun getBase64String(bitmap: Bitmap): String? {
+    val baos = ByteArrayOutputStream()
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos)
+    val imageBytes = baos.toByteArray()
+    return Base64.encodeToString(imageBytes, Base64.DEFAULT)
+}
+
+// método para inserir todos os dados na Base de dados
+fun inserir(view: View) {
+
+    val request = ServiceBuilder.buildService(EndPoints::class.java)
+    val latitude = latitude.text.toString().toDouble()
+    val longitude = longitude.text.toString().toDouble()
+    val morada= editMoradaView.text.toString()
+    val n_quartos = editNQuartosView.text.toString().toInt()
+    val utilizador_id = shared_preferences.getInt("id", 0)
+    val fotografia =  base64
+
+
+    val call = request.anunciar(
+        users_id = utilizador_id,
+        morada = morada,
+        n_quartos = n_quartos,
+        latitude = latitude.toString().toDouble(),
+        longitude = longitude.toString().toDouble(),
+        fotografia = fotografia,
+        preco = 20.0,
+        ncasas_banho = 1,
+        telemovel= "teste",
+        mobilado = "teste",
+        outros_atributos = "1",
+        qrcode = "teste"
+    )
+
+    call.enqueue(object : Callback<OutputAnuncio> {
+        override fun onResponse(call: Call<OutputAnuncio>, response: Response<OutputAnuncio>){
+            if (response.isSuccessful){
+                val c: OutputAnuncio = response.body()!!
+                Toast.makeText(this@InserirAnunciosActivity, c.MSG, Toast.LENGTH_LONG).show()
+                val intent = Intent(this@InserirAnunciosActivity, MapsActivity::class.java)
+                startActivity(intent);
+                finish()
+
+            }
+        }
+        override fun onFailure(call: Call<OutputAnuncio>, t: Throwable){
+            Toast.makeText(this@InserirAnunciosActivity,"${t.message}", Toast.LENGTH_SHORT).show()
+        }
+    })
+
+
+}
+
