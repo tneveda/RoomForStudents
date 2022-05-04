@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_inserir_anuncios.xml" value="0.1" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_maps.xml" value="0.1" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/nav_header.xml" value="0.1" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/menu/nav_menu.xml" value="0.33" />
