@@ -21,5 +21,8 @@
     <string name="personalArea">Área Pessoal</string>
     <string name="qrcode">Qrcode</string>
     <string name="register">Registar</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirmar Palavra-Passe</string>
 
 </resources>
