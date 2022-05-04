@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -14,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
+import ecgm.com.roomforstudents.adapter.AnuncioAdapter
 import ecgm.com.roomforstudents.api.Anuncio
 import ecgm.com.roomforstudents.api.EndPoints
 import ecgm.com.roomforstudents.api.ServiceBuilder
@@ -39,7 +39,7 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
 
         val isLogin = sharedpreferences.getBoolean("login",false )
 
-      //  setTitle(R.string.allrooms)
+       setTitle(R.string.allrooms)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         anuncioAdapter = AnuncioAdapter(this /*,this*/)
@@ -52,11 +52,11 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getAnuncios()
-/*
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
-        val navView: NavigationView = findViewById(R.id.nav_view)*/
 
-    /*    if(isLogin)
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+
+      if(isLogin)
         {
             navView.menu.clear();
             navView.inflateMenu(R.menu.nav_menu);
@@ -64,28 +64,28 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
         {
             navView.menu.clear();
             navView.inflateMenu(R.menu.nav_menu_not_logged);
-        }*/
-/*
+        }
+
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open,R.string.close)
 
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)*/
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-      /*  navView.setNavigationItemSelectedListener {
+        navView.setNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.nav_home ->startActivity(Intent(this, ListaAnuncios::class.java).apply{})
-                R.id.nav_mapa -> startActivity(Intent(this, MapsActivity::class.java).apply{})
+                R.id.nav_mapa -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()// startActivity(Intent(this, MapsActivity::class.java).apply{})
                 R.id.nav_qrcode -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()
-                R.id.nav_inserir -> startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
-                R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply{})
-                R.id.nav_login -> startActivity(Intent(this, LoginActivity::class.java).apply{})
+                R.id.nav_inserir -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()//startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
+                R.id.nav_anuncios -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()// startActivity(Intent(this, MeusAnunciosActivity::class.java).apply{})
+                R.id.nav_login -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()//startActivity(Intent(this, LoginActivity::class.java).apply{})
                 R.id.nav_registo -> Toast.makeText(applicationContext,"Registar", Toast.LENGTH_SHORT).show()
                 R.id.nav_sair -> logout()
             }
             true
-        }*/
+        }
 
         call.enqueue(object : Callback<List<Anuncio>> {
             override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
@@ -130,16 +130,16 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
         return super.onOptionsItemSelected(item)
     }
 
-  /*  fun logout(){
+    fun logout(){
         val shared_preferences_edit : SharedPreferences.Editor = sharedpreferences.edit()
         shared_preferences_edit.clear()
         shared_preferences_edit.apply()
 
-        val intent = Intent(this@ListaAnuncios, LoginActivity::class.java)
+     /*   val intent = Intent(this@ListaAnuncios, LoginActivity::class.java)
         startActivity(intent)
-        finish()
+        finish()*/
 
-    }*/
+    }
 
     companion object {
         const val STATUS = ""
