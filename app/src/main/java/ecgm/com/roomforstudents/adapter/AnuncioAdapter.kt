@@ -1,4 +1,4 @@
-package ecgm.com.roomforstudents
+package ecgm.com.roomforstudents.adapter
 
 import android.content.Context
 import android.content.ContextWrapper
@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import ecgm.com.roomforstudents.R
 import ecgm.com.roomforstudents.api.Anuncio
 import java.io.File
 import java.io.FileOutputStream
