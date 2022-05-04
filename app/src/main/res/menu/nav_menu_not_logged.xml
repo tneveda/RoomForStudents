@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
@@ -15,23 +14,20 @@
         android:id="@+id/nav_qrcode"
         android:icon="@drawable/ic_baseline_qr_code_24"
         android:title="@string/qrcode"/>
-    <item android:id="@+id/personalarea"
-        android:title="@string/personalArea">
+
+    <item android:title="@string/personalArea">
         <menu>
             <item
-                android:id="@+id/nav_anuncios"
-                android:icon="@drawable/ic_baseline_auto_awesome_motion_24"
-                android:title="@string/myrooms"/>
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:title="@string/login"/>
             <item
-                android:id="@+id/nav_inserir"
-                android:icon="@drawable/ic_baseline_edit_24"
-                android:title="@string/insert"/>
+                android:id="@+id/nav_registo"
+                android:icon="@drawable/ic_baseline_app_registration_24"
+                android:title="@string/register"/>
+
         </menu>
     </item>
 
 
-    <item
-        android:id="@+id/nav_sair"
-        android:icon="@drawable/logout"
-        android:title="@string/logout" />
 </menu>
