@@ -2,7 +2,22 @@
     <string name="app_name">RoomForStudents</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
-    <string name="username">Utilizador</string>
-    <string name="password">Palavra-Passe</string>
-    <string name="login">Entrar</string>
+    <string name="address_view">Address</string>
+    <string name="number_view">Number</string>
+    <string name="price_view">Price</string>
+    <string name="image_view">Image</string>
+    <string name="filtrar">Filter</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Enter</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="Map">Map</string>
+    <string name="Details">Details</string>
+    <string name="insert">Insert Room</string>
+    <string name="myrooms">My Rooms</string>
+    <string name="allrooms">All Rooms</string>
+    <string name="logout">Logout</string>
+    <string name="personalArea">Personal Area</string>
+    <string name="qrcode">Qrcode</string>
+    <string name="register">Register</string>
 </resources>
