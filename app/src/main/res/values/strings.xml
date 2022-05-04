@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RoomForStudents</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="username">Utilizador</string>
+    <string name="password">Palavra-Passe</string>
+    <string name="login">Entrar</string>
 </resources>

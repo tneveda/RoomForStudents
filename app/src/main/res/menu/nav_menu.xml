@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/nav_procurar"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Procurar"/>
+    <item
+        android:id="@+id/nav_mapa"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="Mapa"/>
+    <item
+        android:id="@+id/nav_qrcode"
+        android:icon="@drawable/ic_baseline_qr_code_24"
+        android:title="QRcode"/>
+    <item android:title="Anúncios">
+        <menu>
+            <item
+                android:id="@+id/nav_anuncios"
+                android:icon="@drawable/ic_baseline_auto_awesome_motion_24"
+                android:title="Menus Anúncios"/>
+            <item
+                android:id="@+id/nav_inserir"
+                android:icon="@drawable/ic_baseline_edit_24"
+                android:title="Inserir Anúncios"/>
+        </menu>
+    </item>
+
+    <item android:title="Perfil">
+        <menu>
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@drawable/ic_baseline_login_24"
+                android:title="Entrar"/>
+            <item
+                android:id="@+id/nav_registo"
+                android:icon="@drawable/ic_baseline_app_registration_24"
+                android:title="Registar"/>
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/nav_sair"
+        android:icon="@drawable/logout"
+        android:title="Sair"/>
+</menu>
