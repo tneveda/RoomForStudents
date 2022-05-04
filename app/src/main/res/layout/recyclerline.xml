@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:background="#d4cece"
+    android:layout_marginRight="16dp">
+
+    <TextView
+        android:id="@+id/morada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="@string/address_view"/>
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_below="@id/morada"
+        android:layout_marginTop="35dp"
+        android:text="@string/price_view"
+        tools:ignore="InvalidId" />
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/price"
+        android:layout_marginTop="35dp"
+        android:textAlignment="center"
+        android:text="@string/number_view"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+    </ImageView>
+
+
+</RelativeLayout>

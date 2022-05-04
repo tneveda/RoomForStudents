@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quarto Para Estudantes</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="address_view">Morada</string>
+    <string name="number_view">Numero</string>
+    <string name="price_view">Preço</string>
+    <string name="image_view">Imagem</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="username">Utilizador</string>
+    <string name="password">Palavra-Passe</string>
+    <string name="login">Entrar</string>
+    <string name="title_activity_maps">Atividade Maps</string>
+    <string name="Map">Mapa</string>
+    <string name="Details">Detalhes</string>
+    <string name="insert">Inserir Quarto</string>
+    <string name="myrooms">Meus Quartos</string>
+    <string name="allrooms">Todos os Quartos</string>
+    <string name="logout">Sair</string>
+    <string name="personalArea">Área Pessoal</string>
+    <string name="qrcode">Qrcode</string>
+    <string name="register">Registar</string>
+
+</resources>
