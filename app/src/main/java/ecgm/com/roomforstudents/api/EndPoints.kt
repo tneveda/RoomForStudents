@@ -30,9 +30,9 @@ interface EndPoints {
                  @Field("outros_atributos") outros_atributos: String?,
                  @Field("qrcode") qrcode: String?): Call<OutputAnuncio>
 
-  //  @FormUrlEncoded
-  //  @POST("/RoomForStudents/api/user_login")
- //   fun login(@Field("username") username: String?, @Field("password") password: String?): Call<OutputLogin>
+    @FormUrlEncoded
+   @POST("/RoomForStudents/api/user_login")
+   fun login(@Field("username") username: String?, @Field("password") password: String?): Call<OutputLogin>
 /*
      @GET("/RoomForStudents/api/anuncios/{id}")
     fun getAnunciosById2(@Path("id") id: String?): Call<List<Anuncio>>*/
