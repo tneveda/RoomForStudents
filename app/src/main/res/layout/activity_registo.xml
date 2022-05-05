@@ -6,7 +6,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Registo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:src="@drawable/logo" />
 
         <EditText
-            android:id="@+id/name"
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cinza"
@@ -39,7 +39,7 @@
 
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/cinza"
@@ -57,6 +57,7 @@
             android:layout_height="wrap_content"
             android:background="@color/cinza"
             android:padding="10dp"
+            android:inputType="textPassword"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/key"
             android:layout_marginTop="10dp"
@@ -70,6 +71,7 @@
             android:layout_height="wrap_content"
             android:background="@color/cinza"
             android:padding="10dp"
+            android:inputType="textPassword"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/key"
             android:layout_marginTop="10dp"
@@ -87,8 +89,9 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/verdeClaro"
-            android:textColor="@color/black" />
-        <!--android:onClick="registo"-->
+            android:textColor="@color/black"
+            android:onClick="registo"/>
+
 
     </LinearLayout>
     <com.google.android.material.navigation.NavigationView

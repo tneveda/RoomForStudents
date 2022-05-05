@@ -39,4 +39,10 @@ interface EndPoints {
 
     @GET("/RoomForStudents/api/anuncios/{id}")
     fun getAnunciosById(@Path("id") id: String?): Call<Anuncio>
+
+    @FormUrlEncoded
+    @POST("/RoomForStudents/api/user")
+    fun registar(@Field("username") username: String?,
+                 @Field("email") email: String?,
+                 @Field("password") password: String?): Call<OutputRegisto>
 }

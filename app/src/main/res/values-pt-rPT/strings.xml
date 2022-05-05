@@ -24,5 +24,6 @@
     <string name="name">Nome</string>
     <string name="email">Email</string>
     <string name="confirm_password">Confirmar Palavra-Passe</string>
+    <string name="diff_password">As passwords são diferentes. Elas devem ser iguais</string>
 
 </resources>
