@@ -61,7 +61,7 @@ class Login : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home ->startActivity(Intent(this, ListaAnuncios::class.java).apply{})
-                R.id.nav_mapa -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()// startActivity(Intent(this, MapsActivity::class.java).apply{})
+                R.id.nav_mapa ->  startActivity(Intent(this, MapsActivity::class.java).apply{})
                 R.id.nav_qrcode -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()
                 R.id.nav_inserir -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()//startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
                 R.id.nav_anuncios -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()// startActivity(Intent(this, MeusAnunciosActivity::class.java).apply{})

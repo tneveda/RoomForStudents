@@ -30,7 +30,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnInfoWindowClickListener {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private lateinit var mMap: GoogleMap
     lateinit var toggle : ActionBarDrawerToggle
@@ -40,9 +40,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnInfoWin
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        //binding = ActivityMapsBinding.inflate(layoutInflater)
-        //setContentView(binding.root)
+        setContentView(R.layout.activity_maps)
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         sharedpreferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
@@ -147,7 +145,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnInfoWin
 
     }
 
-    override fun onInfoWindowClick(p0: Marker?) {
+    override fun onInfoWindowClick(p0: Marker) {
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call :Call <List<Anuncio>> = request.getAnunciosById2(p0!!.title)
         val utilizador_id = sharedpreferences.getInt("id", 0)
@@ -157,8 +155,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnInfoWin
                 if (response.isSuccessful) {
                     anuncios = response.body()!!
                     for (anuncio in anuncios) {
-                        Toast.makeText(applicationContext,"Detalhes", Toast.LENGTH_SHORT).show()
-                     //   val intent = Intent(this@MapsActivity, DetalhesActivity::class.java)
+                        val intent = Intent(this@MapsActivity, ListaAnuncios::class.java)
                         intent.putExtra(PARAM_ID, anuncio.id.toString())
                         intent.putExtra(PARAM_MORADA, anuncio.morada)
                         startActivity(intent)
@@ -170,7 +167,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,GoogleMap.OnInfoWin
                 Toast.makeText(this@MapsActivity,"${t.message}", Toast.LENGTH_LONG).show()
             }
         })
-
     }
     companion object {
         const val STATUS = ""
