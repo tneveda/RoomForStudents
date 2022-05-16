@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_lista_anuncios.xml" value="0.12447916666666667" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_main.xml" value="0.24818840579710144" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_maps.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/exemplo.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_meus_anuncios.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/menu/nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/menu/nav_menu_not_logged.xml" value="0.1" />
       </map>
     </option>
   </component>
