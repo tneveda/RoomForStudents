@@ -6,7 +6,7 @@
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Registo">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,21 @@
             android:drawableStart="@drawable/user"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:hint="@string/username"/>
+            android:hint="@string/name"/>
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/user"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/email"/>
 
         <EditText
             android:id="@+id/password"
@@ -43,27 +57,43 @@
             android:layout_height="wrap_content"
             android:background="@color/cinza"
             android:padding="10dp"
+            android:inputType="textPassword"
             android:drawablePadding="10dp"
             android:drawableStart="@drawable/key"
-            android:inputType="textPassword"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:hint="@string/password"/>
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cinza"
+            android:padding="10dp"
+            android:inputType="textPassword"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/key"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/confirm_password"/>
+
 
         <Button
             android:id="@+id/button_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="@string/login"
+            android:text="@string/register"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:backgroundTint="@color/verdeClaro"
-            android:onClick="login"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:onClick="registo"/>
 
-</LinearLayout>
+
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

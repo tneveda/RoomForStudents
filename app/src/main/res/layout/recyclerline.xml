@@ -15,37 +15,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:text="@string/address_view"/>
+
     <TextView
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
         android:layout_below="@id/morada"
-        android:layout_marginTop="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="184dp"
         android:text="@string/price_view"
+        android:textAlignment="center"
         tools:ignore="InvalidId" />
+
     <TextView
         android:id="@+id/number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/price"
-        android:layout_marginTop="35dp"
-        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="184dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/number_view"
+        android:textAlignment="center"
         tools:ignore="UnknownId" />
 
     <ImageView
         android:id="@+id/image"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_alignParentLeft="true"
         android:layout_width="100dp"
-        android:layout_height="100dp">
-    </ImageView>
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"></ImageView>
 
 
 </RelativeLayout>

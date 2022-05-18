@@ -81,7 +81,7 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
                 R.id.nav_inserir -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()//startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
                 R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply{})
                 R.id.nav_login -> startActivity(Intent(this, Login::class.java).apply{})
-                R.id.nav_registo -> Toast.makeText(applicationContext,"Registar", Toast.LENGTH_SHORT).show()
+                R.id.nav_registo -> startActivity(Intent(this, Registo::class.java).apply{})
                 R.id.nav_sair -> logout()
             }
             true
@@ -135,9 +135,9 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
         shared_preferences_edit.clear()
         shared_preferences_edit.apply()
 
-     /*   val intent = Intent(this@ListaAnuncios, LoginActivity::class.java)
+       val intent = Intent(this@ListaAnuncios, Login::class.java)
         startActivity(intent)
-        finish()*/
+        finish()
 
     }
 

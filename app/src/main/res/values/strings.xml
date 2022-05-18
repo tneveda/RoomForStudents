@@ -20,4 +20,8 @@
     <string name="personalArea">Personal Area</string>
     <string name="qrcode">Qrcode</string>
     <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="diff_password">Both passwords are different. They must be the same</string>
 </resources>
