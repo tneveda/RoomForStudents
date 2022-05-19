@@ -5,7 +5,6 @@ data class Anuncio(
     val id: Int,
     val morada: String,
     val telemovel: String,
-    val qrcode: String,
     val latitude: Float,
     val longitude: Float,
     val n_quartos: Int,

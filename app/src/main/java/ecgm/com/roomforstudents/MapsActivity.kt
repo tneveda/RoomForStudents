@@ -125,6 +125,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                 Toast.makeText(this@MapsActivity,"${t.message}", Toast.LENGTH_LONG).show()
             }
         })
+
+        mMap.setOnInfoWindowClickListener(this)
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -154,7 +156,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                 if (response.isSuccessful) {
                     anuncios = response.body()!!
                     for (anuncio in anuncios) {
-                        val intent = Intent(this@MapsActivity, ListaAnuncios::class.java)
+                        val intent = Intent(this@MapsActivity, DetalhesAnuncio::class.java)
                         intent.putExtra(PARAM_ID, anuncio.id.toString())
                         startActivity(intent)
                     }

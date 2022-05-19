@@ -27,8 +27,7 @@ interface EndPoints {
                  @Field("ncasas_banho") ncasas_banho: Int?,
                  @Field("telemovel") telemovel: String?,
                  @Field("mobilado") mobilado: String?,
-                 @Field("outros_atributos") outros_atributos: String?,
-                 @Field("qrcode") qrcode: String?): Call<OutputAnuncio>
+                 @Field("outros_atributos") outros_atributos: String?): Call<OutputAnuncio>
 
     @FormUrlEncoded
    @POST("/RoomForStudents/api/user_login")
@@ -45,4 +44,7 @@ interface EndPoints {
     fun registar(@Field("username") username: String?,
                  @Field("email") email: String?,
                  @Field("password") password: String?): Call<OutputRegisto>
+
+
+
 }

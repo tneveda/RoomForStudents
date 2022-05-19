@@ -8,12 +8,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Base64
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.zxing.BarcodeFormat
+import com.journeyapps.barcodescanner.BarcodeEncoder
 import ecgm.com.roomforstudents.api.Anuncio
 import ecgm.com.roomforstudents.api.EndPoints
 import ecgm.com.roomforstudents.api.ServiceBuilder
@@ -35,6 +38,8 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
     private lateinit var observacoesView: TextView
     private lateinit var qrcodeView: ImageView
     private lateinit var fotografiaView: ImageView
+    private var ID: Int? = 0
+    private var QRCodeVisible: Boolean= false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,6 +110,7 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
                     anuncios = response.body()!!
                     for (anuncio in anuncios) {
 
+                        ID = anuncio.id
 
                         moradaView.setText(" " +anuncio.morada)
                         priceView.setText(" " +anuncio.preco.toString())
@@ -118,10 +124,7 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
                         val PictureByte = BitmapFactory.decodeByteArray(decodedPicture, 0, decodedPicture.size)
                         fotografiaView.setImageBitmap(PictureByte)
 
-                        val decodedString: ByteArray = Base64.decode(anuncio.qrcode, Base64.DEFAULT)
-                        val decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
 
-                        qrcodeView.setImageBitmap(decodedByte)
 
                     }
 
@@ -157,4 +160,22 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
     companion object {
         const val PARAM_ID = "PARAM_ID"
     }
+
+    fun generateQrCode(view: View) {
+        if(QRCodeVisible == false){
+
+            val content = ID.toString()
+
+            val encoder = BarcodeEncoder()
+            val bitmap = encoder.encodeBitmap(content, BarcodeFormat.QR_CODE, 512, 512)
+
+            QRCodeVisible = true
+
+            qrcodeView.setImageBitmap(bitmap)
+
+        }
+        else
+            Toast.makeText(this@DetalhesAnuncioLogado,R.string.alreadyQrcode, Toast.LENGTH_SHORT).show()
+    }
+
 }

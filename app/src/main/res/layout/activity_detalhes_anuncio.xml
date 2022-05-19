@@ -113,6 +113,27 @@
                android:src="@drawable/logo" />
 
 
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/qrcodeImage"
+               android:layout_centerInParent="true"
+               android:layout_marginStart="35dp"
+               android:layout_marginTop="10dp">
+
+           <Button
+               android:id="@+id/gerarQrcode"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:layout_margin="10dp"
+               android:background="@color/verdeEscuro"
+               android:onClick="generateQrCode"
+               android:text="@string/qrcode" />
+
+
+
+</LinearLayout>
+
        </RelativeLayout>
     </ScrollView>
 

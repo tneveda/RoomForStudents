@@ -13,7 +13,6 @@ data class OutputAnuncio(
     val telemovel: String,
     val mobilado: String,
     val outros_atributos: String,
-    val qrcode: String,
     val status: String,
     val MSG: String
 

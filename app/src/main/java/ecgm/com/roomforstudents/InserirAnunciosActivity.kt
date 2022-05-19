@@ -222,8 +222,7 @@ class InserirAnunciosActivity : AppCompatActivity() {
             ncasas_banho = casaBanho,
             telemovel= contacto,
             mobilado = mobilada,
-            outros_atributos = observacao,
-            qrcode = "none"
+            outros_atributos = observacao
         )
 
         call.enqueue(object : Callback<OutputAnuncio> {
@@ -231,7 +230,7 @@ class InserirAnunciosActivity : AppCompatActivity() {
                 if (response.isSuccessful){
                     val c: OutputAnuncio = response.body()!!
                     Toast.makeText(this@InserirAnunciosActivity, c.MSG, Toast.LENGTH_LONG).show()
-                  //  val intent = Intent(this@InserirAnunciosActivity, MapsActivity::class.java)
+                    val intent = Intent(this@InserirAnunciosActivity, MapsActivity::class.java)
                     startActivity(intent);
                     finish()
 
