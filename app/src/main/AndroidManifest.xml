@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomForStudents">
         <activity
+            android:name=".DetalhesAnuncioLogado"
+            android:exported="false" />
+        <activity
             android:name=".DetalhesAnuncio"
             android:exported="false" />
         <activity

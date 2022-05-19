@@ -14,13 +14,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ecgm.com.roomforstudents.R
 import ecgm.com.roomforstudents.api.Anuncio
+import ecgm.com.roomforstudents.api.CellClickListener
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 import java.io.OutputStream
 import java.util.*
 
-class AnuncioAdapter(val context: Context,/* private val cellClickListener: CellClickListener*/): RecyclerView.Adapter<AnuncioAdapter.AnunciosViewHolder>() {
+class AnuncioAdapter(val context: Context, private val cellClickListener: CellClickListener): RecyclerView.Adapter<AnuncioAdapter.AnunciosViewHolder>() {
 
 
     var anuncios : List<Anuncio> = listOf()
@@ -55,9 +56,9 @@ class AnuncioAdapter(val context: Context,/* private val cellClickListener: Cell
             morada.text = anuncio.morada
             telemovel.text = anuncio.telemovel
 
-         /*   itemView.setOnClickListener {
+           itemView.setOnClickListener {
                 cellClickListener.onCellClickListener(anuncio)
-            }*/
+            }
 
             val decodedString: ByteArray = Base64.decode(anuncio.fotografia, Base64.DEFAULT)
             val decodedByte = BitmapFactory.decodeByteArray(decodedString, 0, decodedString.size)
