@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,42 +8,8 @@
     android:layout_marginBottom="16dp"
     android:layout_marginLeft="16dp"
     android:background="#d4cece"
-    android:layout_marginRight="16dp">
-
-    <TextView
-        android:id="@+id/morada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:text="@string/address_view"/>
-
-    <TextView
-        android:id="@+id/price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/morada"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="184dp"
-        android:text="@string/price_view"
-        android:textAlignment="center"
-        tools:ignore="InvalidId" />
-
-    <TextView
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/price"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="184dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginBottom="16dp"
-        android:text="@string/number_view"
-        android:textAlignment="center"
-        tools:ignore="UnknownId" />
+    android:layout_marginRight="16dp"
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/image"
@@ -54,5 +20,42 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"></ImageView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/morada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/address_view"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/price_view"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:text="@string/number_view"
+            tools:ignore="UnknownId" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
