@@ -228,4 +228,6 @@ class InserirAnunciosActivity : AppCompatActivity() {
 
     }
 
+    fun cancelar(view: View) {}
+
 }

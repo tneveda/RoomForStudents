@@ -13,95 +13,149 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
-        <TableLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:stretchColumns="1">
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+
+            <EditText
+                android:id="@+id/morada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"
+                android:hint=" Morada*"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/quartos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_king_bed_24"
+                android:hint=" Nº Quartos*"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+
+            <EditText
+                android:id="@+id/casaBanho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_bathtub_24"
+                android:hint=" Casa de Banho*"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/mobilada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_home_24"
+                android:hint=" Casa Com Mobilia"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/contacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                android:hint=" Contacto"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/preco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_euro_24"
+                android:hint=" Preço"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
+
+            <EditText
+                android:id="@+id/observacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/cinza"
+                android:drawableStart="@drawable/ic_baseline_comment_24"
+                android:hint=" Observações"
+                android:inputType="textAutoComplete"
+                android:minHeight="16dp"
+                android:padding="10dp" />
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/verdeEscuro"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-
-                <ImageView
-                    android:id="@+id/preview"
-                    android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:layout_marginTop="10dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_launcher_background" />
-
-
-                <EditText
-                    android:id="@+id/morada"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="morada"
-                    android:inputType="textAutoComplete"
-                    android:minHeight="16dp"
-                    android:textSize="18sp" />
-                <EditText
-                    android:id="@+id/latitude"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="latitude"
-                    android:inputType="textAutoComplete"
-                    android:minHeight="16dp"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/longitude"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="longitude"
-                    android:inputType="textAutoComplete"
-                    android:minHeight="16dp"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:id="@+id/nquartos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:hint="numero de quartos"
-                    android:inputType="textAutoComplete"
-                    android:minHeight="16dp"
-                    android:textSize="18sp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="60dp">
 
                 <Button
-                    android:id="@+id/upload"
-                    android:layout_width="match_parent"
+                    android:id="@+id/cancelar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginTop="10dp"
-                    android:text="upload" />
-
+                    android:layout_margin="10dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="cancelar"
+                    android:text="Cancelar" />
 
                 <Button
-                    android:id="@+id/inserir"
-                    android:layout_width="match_parent"
+                    android:id="@+id/guardar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:layout_weight="1"
-                    android:text="inserir"
+                    android:layout_margin="10dp"
+                    android:background="@color/verdeEscuro"
                     android:onClick="inserir"
-                    />
-
-
+                    android:text="Guardar" />
 
             </LinearLayout>
 
-        </TableLayout>
+        </LinearLayout>
+
     </ScrollView>
 </RelativeLayout>
 
