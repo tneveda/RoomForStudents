@@ -49,11 +49,14 @@ class AnuncioAdapter(val context: Context,/* private val cellClickListener: Cell
         private val morada: TextView = itemView.findViewById(R.id.morada)
         private val telemovel: TextView = itemView.findViewById(R.id.number)
         private val fotografia: ImageView = itemView.findViewById(R.id.image)
+        private val preco: TextView = itemView.findViewById(R.id.price)
 
 
         fun bind(anuncio: Anuncio) {
-            morada.text = anuncio.morada
+            morada.text = anuncio.n_quartos.toString() +  " quartos, "   + anuncio.morada
             telemovel.text = anuncio.telemovel
+            preco.text = anuncio.preco.toString() + " €/mes"
+
 
          /*   itemView.setOnClickListener {
                 cellClickListener.onCellClickListener(anuncio)
