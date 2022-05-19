@@ -18,13 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomForStudents" >
         <activity
+            android:name=".InserirAnunciosActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MeusAnunciosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DetalhesLogadoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DetalhesActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
