@@ -35,6 +35,11 @@ class InserirAnunciosActivity : AppCompatActivity() {
     private lateinit var shared_preferences: SharedPreferences
     private lateinit var latitude : EditText
     private lateinit var longitude : EditText
+    private lateinit var casaBanho : EditText
+    private lateinit var mobilada : EditText
+    private lateinit var contacto : EditText
+    private lateinit var preco : EditText
+    private lateinit var observacao : EditText
     private lateinit var imageView: ImageView
     private lateinit var button: Button
     private val pickImage = 100
@@ -48,11 +53,16 @@ class InserirAnunciosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_inserir_anuncios)
 
         imageView = findViewById(R.id.preview)
-        button = findViewById(R.id.upload)
+        button = findViewById(R.id.inserirFoto)
         editMoradaView = findViewById(R.id.morada)
-        editNQuartosView = findViewById(R.id.nquartos)
+        editNQuartosView = findViewById(R.id.quartos)
         latitude = findViewById(R.id.latitude)
         longitude = findViewById(R.id.longitude)
+        casaBanho = findViewById(R.id.casaBanho)
+        mobilada = findViewById(R.id.mobilada)
+        contacto = findViewById(R.id.contacto)
+        preco = findViewById(R.id.preco)
+        observacao = findViewById(R.id.observacao)
         button.setOnClickListener {
             val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             startActivityForResult(gallery, pickImage)
@@ -190,6 +200,13 @@ class InserirAnunciosActivity : AppCompatActivity() {
         val longitude = longitude.text.toString().toDouble()
         val morada= editMoradaView.text.toString()
         val n_quartos = editNQuartosView.text.toString().toInt()
+        val casaBanho = casaBanho.text.toString().toInt()
+        val contacto = contacto.text.toString()
+        val mobilada = mobilada.text.toString()
+        val preco = preco.text.toString().toDouble()
+        val observacao = observacao.text.toString()
+
+
         val utilizador_id = shared_preferences.getInt("id", 0)
         val fotografia =  base64
 
@@ -201,12 +218,12 @@ class InserirAnunciosActivity : AppCompatActivity() {
             latitude = latitude.toString().toDouble(),
             longitude = longitude.toString().toDouble(),
             fotografia = fotografia,
-            preco = 20.0,
-            ncasas_banho = 1,
-            telemovel= "teste",
-            mobilado = "teste",
-            outros_atributos = "1",
-            qrcode = "teste"
+            preco = preco,
+            ncasas_banho = casaBanho,
+            telemovel= contacto,
+            mobilado = mobilada,
+            outros_atributos = observacao,
+            qrcode = "none"
         )
 
         call.enqueue(object : Callback<OutputAnuncio> {
@@ -228,6 +245,5 @@ class InserirAnunciosActivity : AppCompatActivity() {
 
     }
 
-    fun cancelar(view: View) {}
 
 }
