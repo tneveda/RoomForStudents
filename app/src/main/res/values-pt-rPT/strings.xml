@@ -21,9 +21,15 @@
     <string name="personalArea">Área Pessoal</string>
     <string name="qrcode">Qrcode</string>
     <string name="register">Registar</string>
-    <string name="name">Nome</string>
-    <string name="email">Email</string>
-    <string name="confirm_password">Confirmar Palavra-Passe</string>
-    <string name="diff_password">As passwords são diferentes. Elas devem ser iguais</string>
+    <string name="adress2">Morada*</string>
+    <string name="longitude">Longitude*</string>
+    <string name="latitude">Latitude*</string>
+    <string name="rooms">Nº de Quartos*</string>
+    <string name="wc">Nº Casas de Banho*</string>
+    <string name="furniture">Mobilada*</string>
+    <string name="contacto">Contacto*</string>
+    <string name="price">Preço (por mês)*</string>
+    <string name="obs">Observações*</string>
+    <string name="insertImage">Inserir Imagem</string>
 
 </resources>
