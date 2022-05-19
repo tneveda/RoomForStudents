@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -15,13 +16,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import ecgm.com.roomforstudents.adapter.AnuncioAdapter
 import ecgm.com.roomforstudents.api.Anuncio
+import ecgm.com.roomforstudents.api.CellClickListener
 import ecgm.com.roomforstudents.api.EndPoints
 import ecgm.com.roomforstudents.api.ServiceBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
+class ListaAnuncios : AppCompatActivity(), CellClickListener {
 
     lateinit var toggle : ActionBarDrawerToggle
     private lateinit var sharedpreferences: SharedPreferences
@@ -42,12 +44,9 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
        setTitle(R.string.allrooms)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        anuncioAdapter = AnuncioAdapter(this /*,this*/)
+        anuncioAdapter = AnuncioAdapter(this ,this)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = anuncioAdapter
-
-
-        // val anuncioAdapter = AnuncioAdapter(anuncios, this)
 
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
@@ -93,12 +92,6 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
 
 
                     anuncioAdapter.Anuncios(response.body()!!);
-                    /*    recyclerView.apply {
-                              setHasFixedSize(true)
-                              layoutManager = LinearLayoutManager(this@ListaAnuncios)
-                              adapter = AnuncioAdapter(response.body()!!)
-
-                          }*/
 
                 }
             }
@@ -107,20 +100,15 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
             }
         }) }
 
-    fun popup_filter(view: View) {
 
 
-
-    }
-
-   /* override fun onCellClickListener(data: Anuncio) {
-        val intent = Intent(this@ListaAnuncios, DetalhesActivity::class.java)
+  override fun onCellClickListener(data: Anuncio) {
+        val intent = Intent(this@ListaAnuncios, DetalhesAnuncio::class.java)
         intent.putExtra(PARAM_ID, data.id.toString())
-        /*  intent.putExtra(PARAM_MORADA, data.morada)
-             intent.putExtra(PARAM_TELEMOVEL, data.telemovel)*/
+      
         startActivityForResult(intent, newAnuncioActivityRequestCode1)
         Log.e("***ID", data.id.toString())
-    }*/
+    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -142,8 +130,7 @@ class ListaAnuncios : AppCompatActivity()/*, CellClickListener*/ {
     }
 
     companion object {
-        const val STATUS = ""
-        const val DELETE_ID = "DELETE_ID"
+
         const val PARAM_ID = "PARAM_ID"
 
     }

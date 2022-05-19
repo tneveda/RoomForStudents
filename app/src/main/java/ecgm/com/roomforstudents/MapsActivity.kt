@@ -109,7 +109,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getAnuncios()
         var position: LatLng
-        val utilizador_id = sharedpreferences.getInt("id", 0)
 
         call.enqueue(object : Callback<List<Anuncio>> {
             override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>){
@@ -149,7 +148,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
     override fun onInfoWindowClick(p0: Marker) {
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call :Call <List<Anuncio>> = request.getAnunciosById2(p0!!.title)
-        val utilizador_id = sharedpreferences.getInt("id", 0)
 
         call.enqueue(object : Callback<List<Anuncio>> {
             override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
@@ -158,7 +156,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                     for (anuncio in anuncios) {
                         val intent = Intent(this@MapsActivity, ListaAnuncios::class.java)
                         intent.putExtra(PARAM_ID, anuncio.id.toString())
-                        intent.putExtra(PARAM_MORADA, anuncio.morada)
                         startActivity(intent)
                     }
 
@@ -170,12 +167,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
         })
     }
     companion object {
-        const val STATUS = ""
-        const val DELETE_ID = "DELETE_ID"
         const val PARAM_ID = "PARAM_ID"
-        const val PARAM_MORADA = "PARAM_MORADA"
-        const val PARAM_PRECO = "PARAM_PRECO"
-        const val PARAM_NUMERO = "PARAM_NUMERO"
 
     }
 }

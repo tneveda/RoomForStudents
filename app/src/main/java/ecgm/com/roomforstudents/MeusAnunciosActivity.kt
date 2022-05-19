@@ -15,13 +15,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import ecgm.com.roomforstudents.adapter.AnuncioAdapter
 import ecgm.com.roomforstudents.api.Anuncio
+import ecgm.com.roomforstudents.api.CellClickListener
 import ecgm.com.roomforstudents.api.EndPoints
 import ecgm.com.roomforstudents.api.ServiceBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MeusAnunciosActivity : AppCompatActivity() /*, CellClickListener*/ {
+class MeusAnunciosActivity : AppCompatActivity() , CellClickListener {
 
 
     lateinit var toggle: ActionBarDrawerToggle
@@ -38,13 +39,11 @@ class MeusAnunciosActivity : AppCompatActivity() /*, CellClickListener*/ {
         setTitle(R.string.myrooms)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        anuncioAdapter = AnuncioAdapter(this/*, this */)
+        anuncioAdapter = AnuncioAdapter(this, this )
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = anuncioAdapter
         val isLogin = shared_preferences.getBoolean("login", false)
         val user_id = shared_preferences.getInt("id", 0)
-
-        // Toast.makeText(applicationContext,teste, Toast.LENGTH_SHORT).show()
 
 
         val request = ServiceBuilder.buildService(EndPoints::class.java)
@@ -122,14 +121,12 @@ class MeusAnunciosActivity : AppCompatActivity() /*, CellClickListener*/ {
 
     }
 
-   /* override fun onCellClickListener(data: Anuncio) {
-        val intent = Intent(this@MeusAnunciosActivity, DetalhesLogaAnuncio::class.java)
+    override fun onCellClickListener(data: Anuncio) {
+        val intent = Intent(this@MeusAnunciosActivity, DetalhesAnuncioLogado::class.java)
         intent.putExtra(PARAM_ID, data.id.toString())
-        // intent.putExtra(PARAM_MORADA, data.morada)
-        //  intent.putExtra(PARAM_TELEMOVEL, data.telemovel)
         startActivityForResult(intent, newAnuncioActivityRequestCode1)
         Log.e("***ID", data.id.toString())
-    }*/
+    }
     companion object {
 
         const val PARAM_ID = "PARAM_ID"
