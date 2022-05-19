@@ -20,4 +20,14 @@
     <string name="personalArea">Personal Area</string>
     <string name="qrcode">Qrcode</string>
     <string name="register">Register</string>
+    <string name="adress2">Address*</string>
+    <string name="longitude">Longitude</string>
+    <string name="latitude">Latitude*</string>
+    <string name="rooms">Number of Rooms*</string>
+    <string name="wc">Number of Bathrooms*</string>
+    <string name="furniture">Furniture*</string>
+    <string name="contacto">Contact*</string>
+    <string name="price">Price (per month)*</string>
+    <string name="obs">Observations*</string>
+    <string name="insertImage">Insert Image</string>
 </resources>
