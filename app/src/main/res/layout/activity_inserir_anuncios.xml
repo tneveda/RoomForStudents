@@ -163,25 +163,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="75dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="60dp">
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/inserirFoto"
-                    android:layout_width="100dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:background="@color/verdeEscuro"
                     android:text="@string/insertImage" />
 
                 <Button
                     android:id="@+id/guardar"
-                    android:layout_width="100dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:layout_weight="1"
                     android:background="@color/verdeEscuro"
                     android:onClick="inserir"
                     android:text="@string/insert" />
