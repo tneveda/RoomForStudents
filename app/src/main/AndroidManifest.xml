@@ -19,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomForStudents">
         <activity
+            android:name=".EditarAnuncios"
+            android:exported="false" />
+        <activity
             android:name=".DetalhesAnuncioLogado"
             android:exported="false" />
         <activity
@@ -27,7 +30,6 @@
         <activity
             android:name=".InserirAnunciosActivity"
             android:exported="false" />
-
         <activity
             android:name=".MeusAnunciosActivity"
             android:exported="false" />
