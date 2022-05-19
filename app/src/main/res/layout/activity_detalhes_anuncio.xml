@@ -34,18 +34,27 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginTop="10dp"
-                android:text="  Rua Cidade do Recife"
                 android:drawableStart="@drawable/ic_baseline_location_on_24"/>
+
+           <TextView
+               android:id="@+id/preco"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/localizacao"
+               android:layout_marginLeft="50dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="50dp"
+               android:drawableStart="@drawable/ic_baseline_phone_24"
+                />
 
            <TextView
                android:id="@+id/quartos"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
-               android:layout_below="@+id/localizacao"
+               android:layout_below="@+id/preco"
                android:layout_marginLeft="50dp"
                android:layout_marginRight="50dp"
                android:layout_marginTop="10dp"
-               android:text="  3 quartos"
                android:drawableStart="@drawable/ic_baseline_king_bed_24"/>
 
            <TextView
@@ -57,7 +66,7 @@
                android:layout_marginTop="10dp"
                android:layout_marginRight="50dp"
                android:drawableStart="@drawable/ic_baseline_bathtub_24"
-               android:text="  2 casas de banho" />
+              />
 
            <TextView
                android:id="@+id/movel"
@@ -68,7 +77,7 @@
                android:layout_marginTop="10dp"
                android:layout_marginRight="50dp"
                android:drawableStart="@drawable/ic_baseline_home_24"
-               android:text="  Mobilada - 150m2" />
+              />
 
            <TextView
                android:id="@+id/contacto"
@@ -79,7 +88,7 @@
                android:layout_marginTop="10dp"
                android:layout_marginRight="50dp"
                android:drawableStart="@drawable/ic_baseline_phone_24"
-               android:text="  Contacto - 962 352 501" />
+                />
 
            <TextView
                android:id="@+id/observacao"
@@ -90,7 +99,7 @@
                android:layout_marginTop="10dp"
                android:layout_marginRight="50dp"
                android:drawableStart="@drawable/ic_baseline_phone_24"
-               android:text="  @string />
+                />
 
 
            <ImageView

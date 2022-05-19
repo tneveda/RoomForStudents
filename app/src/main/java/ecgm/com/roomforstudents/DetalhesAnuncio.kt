@@ -22,9 +22,26 @@ class DetalhesAnuncio : AppCompatActivity() {
     private lateinit var contactoView: TextView
     private lateinit var observacoesView: TextView
     private lateinit var qrcodeView: ImageView
+    private lateinit var fotografiaView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_anuncio)
+        moradaView = findViewById(R.id.localizacao)
+        priceView = findViewById(R.id.price)
+        numberView = findViewById(R.id.contacto)
+        qrcodeView = findViewById(R.id.qrcodeImage)
+        quartosView = findViewById(R.id.quartos)
+        casaBanhoView = findViewById(R.id.casaBanho)
+        contactoView = findViewById(R.id.contacto)
+        observacoesView = findViewById(R.id.observacao)
+        movelView = findViewById(R.id.movel)
+        qrcodeView = findViewById(R.id.qrcodeImage)
+        fotografiaView = findViewById(R.id.imagemDetalhe)
+
+
+
+
+
     }
 }
