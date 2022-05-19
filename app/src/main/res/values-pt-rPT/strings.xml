@@ -31,5 +31,9 @@
     <string name="price">Preço (por mês)*</string>
     <string name="obs">Observações*</string>
     <string name="insertImage">Inserir Imagem</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirme a Password</string>
+    <string name="diff_password">Ambas as passwords devem ser iguais</string>
 
 </resources>
