@@ -27,7 +27,7 @@
     <string name="wc">Number of Bathrooms*</string>
     <string name="furniture">Furniture*</string>
     <string name="contacto">Contact*</string>
-    <string name="price">Price*</string>
+    <string name="price">Price (per month)*</string>
     <string name="obs">Observations*</string>
     <string name="insertImage">Insert Image</string>
 </resources>
