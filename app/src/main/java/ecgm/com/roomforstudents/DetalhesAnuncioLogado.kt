@@ -202,7 +202,7 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
                     val c: OutputApagar = response.body()!!
                     Toast.makeText(this@DetalhesAnuncioLogado, c.MSG, Toast.LENGTH_LONG).show()
                     val intent = Intent(this@DetalhesAnuncioLogado, MapsActivity::class.java)
-                    setResult(Activity.RESULT_OK, intent)
+                    startActivity(intent)
                     finish()
                 }
             }
