@@ -1,5 +1,6 @@
 package ecgm.com.roomforstudents
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -40,6 +41,7 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
     private lateinit var fotografiaView: ImageView
     private var ID: Int? = 0
     private var QRCodeVisible: Boolean= false
+    private val newActivityRequestCode = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -101,10 +103,10 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
         }
 
         var id = intent.getStringExtra(PARAM_ID)
-        val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call : Call<List<Anuncio>> = request.getAnunciosById2(id)
+       val request = ServiceBuilder.buildService(EndPoints::class.java)
+       val call : Call<List<Anuncio>> = request.getAnunciosById2(id)
 
-        call.enqueue(object : Callback<List<Anuncio>> {
+       call.enqueue(object : Callback<List<Anuncio>> {
             override fun onResponse(call: Call<List<Anuncio>>, response: Response<List<Anuncio>>) {
                 if (response.isSuccessful) {
                     anuncios = response.body()!!
@@ -113,10 +115,10 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
                         ID = anuncio.id
 
                         moradaView.setText(" " +anuncio.morada)
-                        priceView.setText(" " +anuncio.preco.toString())
+                        priceView.setText(" " +anuncio.preco.toString()+ " " + getText(R.string.money))
                         numberView.setText(" " +anuncio.telemovel)
-                        quartosView.setText(" " +anuncio.n_quartos.toString() + " quartos")
-                        casaBanhoView.setText(" " +anuncio.ncasas_banho.toString()+ " casas de banho")
+                        quartosView.setText(" " +anuncio.n_quartos.toString()+ " " +  getText(R.string.Rooms))
+                        casaBanhoView.setText(" " +anuncio.ncasas_banho.toString()+ " " + getText(R.string.bathroom))
                         observacoesView.setText(" " +anuncio.outros_atributos)
                         movelView.setText(" " +anuncio.mobilado)
 
@@ -177,5 +179,17 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
         else
             Toast.makeText(this@DetalhesAnuncioLogado,R.string.alreadyQrcode, Toast.LENGTH_SHORT).show()
     }
+
+    fun edit(view: View) {
+        var id = intent.getStringExtra(PARAM_ID)
+
+        val intent = Intent(this@DetalhesAnuncioLogado,EditarAnuncios::class.java)
+        intent.putExtra(PARAM_ID,  id.toString())
+        startActivityForResult(intent, newActivityRequestCode)
+    }
+
+    fun delete(view: View) {}
+
+
 
 }

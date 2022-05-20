@@ -112,10 +112,10 @@ class DetalhesAnuncio : AppCompatActivity() {
 
 
                         moradaView.setText(" " +anuncio.morada)
-                        priceView.setText(" " +anuncio.preco.toString())
+                        priceView.setText(" " +anuncio.preco.toString()+ " " + getText(R.string.money))
                         numberView.setText(" " +anuncio.telemovel)
-                        quartosView.setText(" " +anuncio.n_quartos.toString() + " quartos")
-                        casaBanhoView.setText(" " +anuncio.ncasas_banho.toString()+ " casas de banho")
+                        quartosView.setText(" " +anuncio.n_quartos.toString()+ " " +  getText(R.string.Rooms))
+                        casaBanhoView.setText(" " +anuncio.ncasas_banho.toString()+ " " + getText(R.string.bathroom))
                         observacoesView.setText(" " +anuncio.outros_atributos)
                         movelView.setText(" " +anuncio.mobilado)
 

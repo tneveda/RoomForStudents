@@ -14,6 +14,8 @@
     <string name="Map">Map</string>
     <string name="Details">Details</string>
     <string name="insert">Insert Room</string>
+    <string name ="delete">Delete</string>
+    <string name ="edit">Edit</string>
     <string name="myrooms">My Rooms</string>
     <string name="allrooms">All Rooms</string>
     <string name="logout">Logout</string>
@@ -35,4 +37,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="diff_password">Both passwords must be the same</string>
     <string name="alreadyQrcode">QrCode is already visible</string>
+    <string name="editRoom">Edit Room</string>
+    <string name="Rooms">"rooms "</string>
+    <string name="money">€/month</string>
+    <string name="bathroom">bathrooms</string>
 </resources>

@@ -54,9 +54,9 @@ class AnuncioAdapter(val context: Context, private val cellClickListener: CellCl
 
 
         fun bind(anuncio: Anuncio) {
-            morada.text = anuncio.n_quartos.toString() +  " quartos, "   + anuncio.morada
+            morada.text = anuncio.n_quartos.toString() +  " quartos, "  + anuncio.morada
             telemovel.text = anuncio.telemovel
-            preco.text = anuncio.preco.toString() + " €/mes"
+            preco.text = anuncio.preco.toString() + " €/mês"
 
 
            itemView.setOnClickListener {

@@ -110,26 +110,41 @@
                 android:layout_gravity="center"
                 android:layout_below="@+id/contacto"
                 android:layout_margin="50dp"
-                android:src="@drawable/logo" />
+               />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/qrcodeImage"
                 android:layout_centerInParent="true"
-                android:layout_marginStart="35dp"
                 android:layout_marginTop="10dp">
 
                 <Button
                     android:id="@+id/gerarQrcode"
-                    android:layout_width="150dp"
+                    android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:layout_margin="5dp"
                     android:background="@color/verdeEscuro"
                     android:onClick="generateQrCode"
                     android:text="@string/qrcode" />
 
+                <Button
+                    android:id="@+id/editarAnuncio"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="edit"
+                    android:text="@string/edit" />
 
+                <Button
+                    android:id="@+id/apagarAnuncio"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="delete"
+                    android:text="@string/delete" />
 
             </LinearLayout>
 
