@@ -163,7 +163,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginTop="10dp">
 
                     <Button
@@ -181,7 +182,7 @@
                         android:layout_margin="10dp"
                         android:background="@color/verdeEscuro"
                         android:onClick="editar"
-                        android:text="@string/insert" />
+                        android:text="@string/editRoom" />
 
                 </LinearLayout>
 

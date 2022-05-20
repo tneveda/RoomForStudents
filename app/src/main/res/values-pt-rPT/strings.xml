@@ -38,5 +38,9 @@
     <string name="confirm_password">Confirme a Password</string>
     <string name="diff_password">Ambas as passwords devem ser iguais</string>
     <string name="alreadyQrcode">O QrCode já é visivel</string>
+    <string name="editRoom">Editar Quarto</string>
+    <string name="Rooms">"quartos "</string>
+    <string name="money">€/mês</string>
+    <string name="bathroom">quartos de banho</string>
 
 </resources>

@@ -237,5 +237,4 @@ fun editar(view: View) {
 }
 
 
-fun inserir(view: View) {}
 }

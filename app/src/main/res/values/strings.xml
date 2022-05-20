@@ -37,4 +37,8 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="diff_password">Both passwords must be the same</string>
     <string name="alreadyQrcode">QrCode is already visible</string>
+    <string name="editRoom">Edit Room</string>
+    <string name="Rooms">"rooms "</string>
+    <string name="money">€/month</string>
+    <string name="bathroom">bathrooms</string>
 </resources>
