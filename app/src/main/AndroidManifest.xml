@@ -13,14 +13,14 @@
 
     <application
         android:allowBackup="true"
-
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomForStudents">
-
-
+        <activity
+            android:name=".QrCodeScanner"
+            android:exported="false" />
         <activity
             android:name=".EditarAnuncios"
             android:exported="false" />
