@@ -59,6 +59,9 @@ interface EndPoints {
                @Field("mobilado") mobilado: String?,
                @Field("outros_atributos") outros_atributos: String?): Call<OutputEditar>
 
+    @POST("apagarAnuncios/{id}")
+    fun apagarAnuncio(@Path("id") id: Int?): Call<OutputApagar>
+
 
 
 

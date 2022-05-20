@@ -20,6 +20,7 @@ import com.google.zxing.BarcodeFormat
 import com.journeyapps.barcodescanner.BarcodeEncoder
 import ecgm.com.roomforstudents.api.Anuncio
 import ecgm.com.roomforstudents.api.EndPoints
+import ecgm.com.roomforstudents.api.OutputApagar
 import ecgm.com.roomforstudents.api.ServiceBuilder
 import retrofit2.Call
 import retrofit2.Callback
@@ -188,7 +189,30 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
         startActivityForResult(intent, newActivityRequestCode)
     }
 
-    fun delete(view: View) {}
+    fun delete(view: View) {
+        var id = intent.getStringExtra("PARAM_ID")
+        var idString = id.toString()
+        val request = ServiceBuilder.buildService(EndPoints::class.java)
+        val call = request.apagarAnuncio(id = idString.toInt())
+
+        val x = 1
+        call.enqueue(object : Callback<OutputApagar> {
+            override fun onResponse(call: Call<OutputApagar>, response: Response<OutputApagar>) {
+                if (response.isSuccessful) {
+                    val c: OutputApagar = response.body()!!
+                    Toast.makeText(this@DetalhesAnuncioLogado, c.MSG, Toast.LENGTH_LONG).show()
+                    val intent = Intent(this@DetalhesAnuncioLogado, MapsActivity::class.java)
+                    setResult(Activity.RESULT_OK, intent)
+                    finish()
+                }
+            }
+
+            override fun onFailure(call: Call<OutputApagar>, t: Throwable) {
+                Toast.makeText(this@DetalhesAnuncioLogado, "${t.message}", Toast.LENGTH_SHORT)
+                    .show()
+            }
+        })
+    }
 
 
 
