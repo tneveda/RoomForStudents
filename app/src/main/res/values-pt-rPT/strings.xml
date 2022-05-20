@@ -15,6 +15,8 @@
     <string name="Map">Mapa</string>
     <string name="Details">Detalhes</string>
     <string name="insert">Inserir Quarto</string>
+    <string name="delete">Apagar</string>
+    <string name ="edit">Editar</string>
     <string name="myrooms">Meus Quartos</string>
     <string name="allrooms">Todos os Quartos</string>
     <string name="logout">Sair</string>

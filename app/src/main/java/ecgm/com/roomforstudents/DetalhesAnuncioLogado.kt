@@ -40,6 +40,7 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
     private lateinit var fotografiaView: ImageView
     private var ID: Int? = 0
     private var QRCodeVisible: Boolean= false
+    private val newActivityRequestCode = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -177,5 +178,16 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
         else
             Toast.makeText(this@DetalhesAnuncioLogado,R.string.alreadyQrcode, Toast.LENGTH_SHORT).show()
     }
+
+    fun edit(view: View) {
+        var id = intent.getStringExtra(PARAM_ID)
+
+        val intent = Intent(this@DetalhesAnuncioLogado,EditarAnuncios::class.java)
+        intent.putExtra(PARAM_ID,  id.toString())
+        startActivityForResult(intent, newActivityRequestCode)
+    }
+
+    fun delete(view: View) {}
+
 
 }

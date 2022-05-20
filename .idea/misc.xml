@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Ana Mendes/Desktop/TrabalhoCM/app/src/main/res/layout/activity_editar_anuncios.xml" value="0.11666666666666667" />
+        <entry key="..\:/Users/Ana Mendes/Desktop/TrabalhoCM/app/src/main/res/layout/activity_detalhes_anuncio.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/Ana Mendes/Desktop/TrabalhoCM/app/src/main/res/layout/activity_detalhes_anuncio_logado.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/Ana Mendes/Desktop/TrabalhoCM/app/src/main/res/layout/activity_editar_anuncios.xml" value="0.1" />
+        <entry key="..\:/Users/Ana Mendes/Desktop/TrabalhoCM/app/src/main/res/layout/activity_inserir_anuncios.xml" value="0.12681159420289856" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_baseline_euro_24.xml" value="0.1945" />
         <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1945" />

@@ -14,6 +14,8 @@
     <string name="Map">Map</string>
     <string name="Details">Details</string>
     <string name="insert">Insert Room</string>
+    <string name ="delete">Delete</string>
+    <string name ="edit">Edit</string>
     <string name="myrooms">My Rooms</string>
     <string name="allrooms">All Rooms</string>
     <string name="logout">Logout</string>

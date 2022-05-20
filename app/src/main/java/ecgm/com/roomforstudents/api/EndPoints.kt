@@ -46,5 +46,20 @@ interface EndPoints {
                  @Field("password") password: String?): Call<OutputRegisto>
 
 
+    @FormUrlEncoded
+    @POST("editar_anuncios/{id}")
+    fun editar(@Path("id") id: Int?,
+               @Field("users_id") users_id: Int?,
+               @Field("morada") morada: String?,
+               @Field("n_quartos") n_quartos: Int?,
+               @Field("latitude") latitude: Double?,
+               @Field("longitude") longitude: Double?,
+               @Field("fotografia") fotografia: String?,
+               @Field("preco") preco: Double?,
+               @Field("ncasas_banho") ncasas_banho: Int?,
+               @Field("telemovel") telemovel: String?,
+               @Field("mobilado") mobilado: String?,
+               @Field("outros_atributos") outros_atributos: String?): Call<OutputEditar>
+
 
 }
