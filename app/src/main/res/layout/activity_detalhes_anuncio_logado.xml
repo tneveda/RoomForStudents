@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhesAnuncioLogado">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imagemDetalhe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/localizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagemDetalhe"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_location_on_24"/>
+
+            <TextView
+                android:id="@+id/preco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/localizacao"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:drawableStart="@drawable/ic_baseline_euro_24"
+                />
+
+            <TextView
+                android:id="@+id/quartos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/preco"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_baseline_king_bed_24"/>
+
+            <TextView
+                android:id="@+id/casaBanho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quartos"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:drawableStart="@drawable/ic_baseline_bathtub_24"
+                />
+
+            <TextView
+                android:id="@+id/movel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/casaBanho"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:drawableStart="@drawable/ic_baseline_home_24"
+                />
+
+            <TextView
+                android:id="@+id/contacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movel"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:drawableStart="@drawable/ic_baseline_phone_24"
+                />
+
+            <TextView
+                android:id="@+id/observacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contacto"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:drawableStart="@drawable/ic_baseline_comment_24"
+                />
+
+
+            <ImageView
+                android:id="@+id/qrcodeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@+id/contacto"
+                android:layout_margin="50dp"
+               />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qrcodeImage"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/gerarQrcode"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="generateQrCode"
+                    android:text="@string/qrcode" />
+
+                <Button
+                    android:id="@+id/editarAnuncio"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="edit"
+                    android:text="@string/edit" />
+
+                <Button
+                    android:id="@+id/apagarAnuncio"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/verdeEscuro"
+                    android:onClick="delete"
+                    android:text="@string/delete" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

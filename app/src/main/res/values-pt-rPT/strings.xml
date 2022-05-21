@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quarto Para Estudantes</string>
+    <string name="open">Abrir</string>
+    <string name="close">Fechar</string>
+    <string name="address_view">Morada</string>
+    <string name="number_view">Numero</string>
+    <string name="price_view">Preço</string>
+    <string name="image_view">Imagem</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="username">Utilizador</string>
+    <string name="password">Palavra-Passe</string>
+    <string name="login">Entrar</string>
+    <string name="title_activity_maps">Atividade Maps</string>
+    <string name="Map">Mapa</string>
+    <string name="Details">Detalhes</string>
+    <string name="insert">Inserir Quarto</string>
+    <string name="delete">Apagar</string>
+    <string name ="edit">Editar</string>
+    <string name="myrooms">Meus Quartos</string>
+    <string name="allrooms">Todos os Quartos</string>
+    <string name="logout">Sair</string>
+    <string name="personalArea">Área Pessoal</string>
+    <string name="qrcode">Qrcode</string>
+    <string name="register">Registar</string>
+    <string name="adress2">Morada*</string>
+    <string name="longitude">Longitude*</string>
+    <string name="latitude">Latitude*</string>
+    <string name="rooms">Nº de Quartos*</string>
+    <string name="wc">Nº Casas de Banho*</string>
+    <string name="furniture">Mobilada*</string>
+    <string name="contacto">Contacto*</string>
+    <string name="price">Preço (por mês)*</string>
+    <string name="obs">Observações*</string>
+    <string name="insertImage">Inserir Imagem</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirme a Password</string>
+    <string name="diff_password">Ambas as passwords devem ser iguais</string>
+    <string name="alreadyQrcode">O QrCode já é visivel</string>
+    <string name="editRoom">Editar Quarto</string>
+    <string name="Rooms">"quartos "</string>
+    <string name="money">€/mês</string>
+    <string name="bathroom">quartos de banho</string>
+
+</resources>
