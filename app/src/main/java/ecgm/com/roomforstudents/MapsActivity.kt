@@ -116,8 +116,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                     anuncios = response.body()!!
                     for (anuncio in anuncios){
                         position = LatLng(anuncio.latitude.toDouble(), anuncio.longitude.toDouble())
-                        mMap.addMarker(MarkerOptions().position(position).title(anuncio.id.toString()).snippet(anuncio.n_quartos.toString() + "-" + anuncio.morada))
-
+                        mMap.addMarker(MarkerOptions().position(position).title(anuncio.preco.toString() + " " + getText(R.string.money)).snippet(anuncio.n_quartos.toString() +" "+ getText(R.string.Rooms)+ "-" + anuncio.morada))
                     }
                 }
             }
