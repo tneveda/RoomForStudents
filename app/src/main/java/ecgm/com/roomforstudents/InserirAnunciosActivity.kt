@@ -74,15 +74,15 @@ class InserirAnunciosActivity : AppCompatActivity() {
 
         setTitle(R.string.insert)
 
-       // val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
-      //  val navView: NavigationView = findViewById(R.id.nav_view)
+      val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+       val navView: NavigationView = findViewById(R.id.nav_view)
 
-    //    toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open,R.string.close)
+       toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open,R.string.close)
 
-    //    drawerLayout.addDrawerListener(toggle)
-   //     toggle.syncState()
+       drawerLayout.addDrawerListener(toggle)
+       toggle.syncState()
 
-    /*    if(isLogin)
+       if(isLogin)
         {
             navView.menu.clear();
             navView.inflateMenu(R.menu.nav_menu);
@@ -96,13 +96,13 @@ class InserirAnunciosActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.nav_home ->startActivity(Intent(this, ListaAnuncios::class.java).apply{})
-                R.id.nav_mapa -> startActivity(Intent(this, MapsActivity::class.java).apply{})
-                R.id.nav_qrcode -> Toast.makeText(applicationContext,"QRcode", Toast.LENGTH_SHORT).show()
-                R.id.nav_inserir -> startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
-                R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply{})
-                R.id.nav_login -> startActivity(Intent(this, LoginActivity::class.java).apply{})
-                R.id.nav_registo -> Toast.makeText(applicationContext,"Registar", Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> startActivity(Intent(this, ListaAnuncios::class.java).apply {})
+                R.id.nav_mapa -> startActivity(Intent(this, MapsActivity::class.java).apply {})
+                R.id.nav_qrcode -> startActivity(Intent(this, QrCodeScanner::class.java).apply{})
+                R.id.nav_inserir ->startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
+                R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply {})
+                R.id.nav_login -> startActivity(Intent(this, Login::class.java).apply {})
+                R.id.nav_registo -> startActivity(Intent(this, Registo::class.java).apply{})
                 R.id.nav_sair -> logout()
             }
             true
@@ -124,11 +124,11 @@ class InserirAnunciosActivity : AppCompatActivity() {
         shared_preferences_edit.clear()
         shared_preferences_edit.apply()
 
-        val intent = Intent(this@InserirAnunciosActivity, LoginActivity::class.java)
+        val intent = Intent(this@InserirAnunciosActivity, Login::class.java)
         startActivity(intent)
         finish()
 
-   */ }
+  }
 
     // Passa o Uri da imagem para bitmap e posteriomente para base64
     // guarda a imagem em formato base64 (numa string) de modo a ser inserido na BD

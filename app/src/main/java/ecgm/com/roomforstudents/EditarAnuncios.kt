@@ -17,6 +17,8 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import ecgm.com.roomforstudents.api.Anuncio
 import ecgm.com.roomforstudents.api.EndPoints
 import ecgm.com.roomforstudents.api.OutputEditar
@@ -74,6 +76,38 @@ class EditarAnuncios : AppCompatActivity() {
         val isLogin = shared_preferences.getBoolean("login", false)
 
         setTitle(R.string.edit)
+
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
+
+        if (isLogin) {
+            navView.menu.clear();
+            navView.inflateMenu(R.menu.nav_menu);
+        } else {
+            navView.menu.clear();
+            navView.inflateMenu(R.menu.nav_menu_not_logged);
+        }
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_home -> startActivity(Intent(this, ListaAnuncios::class.java).apply {})
+                R.id.nav_mapa -> startActivity(Intent(this, MapsActivity::class.java).apply {})
+                R.id.nav_qrcode -> startActivity(Intent(this, QrCodeScanner::class.java).apply{})
+                R.id.nav_inserir ->startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
+                R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply {})
+                R.id.nav_login -> startActivity(Intent(this, Login::class.java).apply {})
+                R.id.nav_registo -> startActivity(Intent(this, Registo::class.java).apply{})
+                R.id.nav_sair -> logout()
+            }
+            true
+        }
 
         var id = intent.getStringExtra(DetalhesAnuncioLogado.PARAM_ID)
         val request = ServiceBuilder.buildService(EndPoints::class.java)
@@ -234,7 +268,26 @@ fun editar(view: View) {
     })
 
 
-}
 
+
+}
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    fun logout(){
+        val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
+        shared_preferences_edit.clear()
+        shared_preferences_edit.apply()
+
+        val intent = Intent(this@EditarAnuncios, Login::class.java)
+        startActivity(intent)
+        finish()
+
+    }
 
 }

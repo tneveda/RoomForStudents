@@ -87,17 +87,11 @@ class DetalhesAnuncioLogado : AppCompatActivity() {
             when (it.itemId) {
                 R.id.nav_home -> startActivity(Intent(this, ListaAnuncios::class.java).apply {})
                 R.id.nav_mapa -> startActivity(Intent(this, MapsActivity::class.java).apply {})
-                R.id.nav_qrcode -> Toast.makeText(applicationContext, "QRcode", Toast.LENGTH_SHORT)
-                    .show()
-                R.id.nav_inserir -> Toast.makeText(applicationContext, "QRcode", Toast.LENGTH_SHORT)
-                    .show() //startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
+                R.id.nav_qrcode -> startActivity(Intent(this, QrCodeScanner::class.java).apply{})
+                R.id.nav_inserir ->startActivity(Intent(this, InserirAnunciosActivity::class.java).apply{})
                 R.id.nav_anuncios -> startActivity(Intent(this, MeusAnunciosActivity::class.java).apply {})
                 R.id.nav_login -> startActivity(Intent(this, Login::class.java).apply {})
-                R.id.nav_registo -> Toast.makeText(
-                    applicationContext,
-                    "Registar",
-                    Toast.LENGTH_SHORT
-                ).show()
+                R.id.nav_registo -> startActivity(Intent(this, Registo::class.java).apply{})
                 R.id.nav_sair -> logout()
             }
             true

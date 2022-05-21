@@ -3,12 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_inserir_anuncios.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_lista_anuncios.xml" value="0.12447916666666667" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_main.xml" value="0.24818840579710144" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_maps.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/activity_qr_code_scanner.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/migue/OneDrive/Ambiente de Trabalho/CURSO ECGM/RoomForStudents_master/app/src/main/res/layout/exemplo.xml" value="0.24818840579710144" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_baseline_euro_24.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/drawable/ic_my_location_black_24dp.xml" value="0.1945" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout-land/activity_registo.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_detalhes_anuncio.xml" value="0.27014218009478674" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_detalhes_anuncio_logado.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_editar_anuncios.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_inserir_anuncios.xml" value="0.22432859399684044" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_lista_anuncios.xml" value="0.33" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_meus_anuncios.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_qr_code_scanner.xml" value="0.13072916666666667" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_registo.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/layout/recyclerline.xml" value="0.1" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/menu/nav_menu.xml" value="0.33" />
+        <entry key="..\:/Users/Utilizador/AndroidStudioProjects/RoomForStudents/app/src/main/res/menu/nav_menu_not_logged.xml" value="0.1" />
       </map>
     </option>
   </component>
